@@ -17,13 +17,18 @@ use "Socal 8 economic links.dta"
 describe
 
 *keep select variables for making wide to long
-keep providerid hospitalname city state countyname hospitaltype hospitalownership ///
+keep ///
+
+	*variables already in long format
+	providerid hospitalname city state countyname hospitaltype hospitalownership ///
 	emergencyservices meetscriteriaformeaningfuluseofe hospitaloverallrating ///
 	hospitaloverallratingfootnote mortalitynationalcomparison mortalitynationalcomparisonfootn ///
 	safetyofcarenationalcomparison safetyofcarenationalcomparisonfo readmissionnationalcomparison ///
 	readmissionnationalcomparisonfoo patientexperiencenationalcompari var20 ///
 	effectivenessofcarenationalcompa var22 timelinessofcarenationalcomparis ///
 	var24 efficientuseofmedicalimagingnati var26 hospitalccn	///
+	
+	*variables in wide format by year
 	numberofamicasesinfy2014 numberofamicasesinfy2015 numberofamicasesinfy2016 numberofamicasesinfy2017 ///
 	numberofcopdcasesinfy2014 numberofcopdcasesinfy2015 numberofcopdcasesinfy2016 numberofcopdcasesinfy2017
 	
